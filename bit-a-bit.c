@@ -34,53 +34,79 @@ void bitC(int c){
 
 int main(){
 	
-	int a,b,c,op;
+	int a,b,c,op,opc;
 	
-	printf("Digite um valor Decimal A: ");
-	scanf("%d",&a);
+	do{
+		printf("----MENU-----\n");		
+		printf("1 - Bitwise: \n");
+		printf("2 - Mascara: \n");
+		printf("3 - Deslocamento: \n");
+		printf("------------\n");
+		printf("Escolha uma Opcao: ");		
+		scanf("%d",&opc);
+		system("cls");
+		
+		switch(opc){
+			case 1:
+			printf("Digite um valor Decimal A: ");
+			scanf("%d",&a);
+		
+			printf("Digite um valor Decimal B: ");
+			scanf("%d",&b);
+			printf("Escolha o Operador (|,&,^): ");
+			scanf("%s",&op);
+			printf("\n");
+		
+			switch(op){
+					case '|':
+						c = a | b;
+						bitA(a);
+						printf("\n");
+						bitB(b);
+						printf("\nA | B");
+						bitC(c);
+						printf("\n");
+					break;
+					case '&':
+						c = a & b;
+						bitA(a);
+						printf("\n");
+						bitB(b);
+						printf("\nA & B");
+						bitC(c);
+						printf("\n");
+					break;
+					case '^':
+						c = a ^ b;
+						bitA(a);
+						printf("\n");
+						bitB(b);
+						printf("\nA ^ B");
+						bitC(c);
+						printf("\n");
+					break;
+				}
+			printf("HEX = %X\n",c);
+			printf("DEC = %d\n",c);
+			if(c & 1)
+				printf("Impar\n");
+			else
+				printf("Par\n");
+			break;
+			case 2:
+				printf("falta complementar\n\n");
+				break;
+			case 3:
+				printf("falta complementar\n\n");
+				break;
+			default:
+                system("cls || clear");
+                printf("Opcao invalida! Tente novamente.\n\n");
+		}
 	
-	printf("Digite um valor Decimal B: ");
-	scanf("%d",&b);
-	printf("Escolha o Operador (|,&,^): ");
-	scanf("%s",&op);
-	printf("\n");
 	
-	switch(op){
-		case '|':
-			c = a | b;
-			bitA(a);
-			printf("\n");
-			bitB(b);
-			printf("\nA | B");
-			bitC(c);
-			printf("\n");
-		break;
-		case '&':
-			c = a & b;
-			bitA(a);
-			printf("\n");
-			bitB(b);
-			printf("\nA & B");
-			bitC(c);
-			printf("\n");
-		break;
-		case '^':
-			c = a ^ b;
-			bitA(a);
-			printf("\n");
-			bitB(b);
-			printf("\nA ^ B");
-			bitC(c);
-			printf("\n");
-		break;
-	}	
-
+	}while(3);
 	
-	printf("HEX = %X\n",c);
-	printf("DEC = %d\n",c);
-	if(c & 1)
-		printf("Impar\n");
-	else
-		printf("Par\n");
+	
 	return 0;
 }
