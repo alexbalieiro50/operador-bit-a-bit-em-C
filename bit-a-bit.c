@@ -41,6 +41,7 @@ int main(){
 		printf("1 - Bitwise: \n");
 		printf("2 - Mascara: \n");
 		printf("3 - Deslocamento: \n");
+		printf("4 - Sair: \n");
 		printf("------------\n");
 		printf("Escolha uma Opcao: ");		
 		scanf("%d",&opc);
@@ -99,13 +100,16 @@ int main(){
 			case 3:
 				printf("falta complementar\n\n");
 				break;
-			default:
-                system("cls || clear");
+			case 4:
+				system("cls || clear");
+				printf("Saindo...\n");
+				break;
+			default:                
                 printf("Opcao invalida! Tente novamente.\n\n");
 		}
 	
 	
-	}while(3);
+	}while(opc != 4);
 	
 	
 	return 0;
