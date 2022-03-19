@@ -3,7 +3,7 @@
 void bitA(int a){
 	
 	if(a==0){		
-		printf("BIN A= |%d|", a);	
+		printf("A= |%d|", a);	
 	}		
 	else{
 		bitA(a/2);
@@ -14,7 +14,7 @@ void bitA(int a){
 void bitB(int b){
 	
 	if(b==0){		
-		printf("BIN B= |%d|", b);	
+		printf("B= |%d|", b);	
 	}		
 	else{
 		bitB(b/2);
@@ -24,7 +24,7 @@ void bitB(int b){
 void bitC(int c){
 	
 	if(c==0){		
-		printf("BIN C= |%d|", c);	
+		printf("= |%d|", c);	
 	}		
 	else{
 		bitC(c/2);
@@ -34,25 +34,47 @@ void bitC(int c){
 
 int main(){
 	
-	int a,b,c;
+	int a,b,c,op;
 	
 	printf("Digite um valor Decimal A: ");
 	scanf("%d",&a);
 	
 	printf("Digite um valor Decimal B: ");
 	scanf("%d",&b);
+	printf("Escolha o Operador (|,&,^): ");
+	scanf("%s",&op);
 	printf("\n");
 	
-	c = a & b;	
-	
-	
-	
-	bitA(a);
-	printf("\n");
-	bitB(b);
-	printf("\n");
-	bitC(c);
-	printf("\n");
+	switch(op){
+		case '|':
+			c = a | b;
+			bitA(a);
+			printf("\n");
+			bitB(b);
+			printf("\nA | B");
+			bitC(c);
+			printf("\n");
+		break;
+		case '&':
+			c = a & b;
+			bitA(a);
+			printf("\n");
+			bitB(b);
+			printf("\nA & B");
+			bitC(c);
+			printf("\n");
+		break;
+		case '^':
+			c = a ^ b;
+			bitA(a);
+			printf("\n");
+			bitB(b);
+			printf("\nA ^ B");
+			bitC(c);
+			printf("\n");
+		break;
+	}	
+
 	
 	printf("HEX = %X\n",c);
 	printf("DEC = %d\n",c);
