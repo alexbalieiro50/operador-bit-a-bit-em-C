@@ -1,4 +1,4 @@
-#include<stdio.h>
+ #include<stdio.h>
 
 void bitA(int a){
 	
@@ -34,18 +34,20 @@ void bitC(int c){
 
 int main(){
 	
-	int a,b,c,op,opc;
+	int a,b,c,d,e,opc,op2;
+	char op1;
+	
 	
 	do{
 		printf("----MENU-----\n");		
 		printf("1 - Bitwise: \n");
-		printf("2 - Mascara: \n");
-		printf("3 - Deslocamento: \n");
+		printf("2 - Deslocamento: \n");
+		printf("3 - Mascara: \n");
 		printf("4 - Sair: \n");
 		printf("------------\n");
 		printf("Escolha uma Opcao: ");		
 		scanf("%d",&opc);
-		system("cls");
+		system("clear");
 		
 		switch(opc){
 			case 1:
@@ -55,10 +57,10 @@ int main(){
 			printf("Digite um valor Decimal B: ");
 			scanf("%d",&b);
 			printf("Escolha o Operador (|,&,^): ");
-			scanf("%s",&op);
+			scanf("%s",&op1);
 			printf("\n");
 		
-			switch(op){
+			switch(op1){
 					case '|':
 						c = a | b;
 						bitA(a);
@@ -96,7 +98,7 @@ int main(){
 			break;
 			case 2:
 				printf("falta complementar\n\n");
-				break;
+				break;				
 			case 3:
 				printf("falta complementar\n\n");
 				break;
