@@ -47,7 +47,7 @@ int main(){
 		printf("------------\n");
 		printf("Escolha uma Opcao: ");		
 		scanf("%d",&opc);
-		system("clear");
+		system("cls");
 		
 		switch(opc){
 			case 1:
